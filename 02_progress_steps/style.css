@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #636262;
+}
+
+.container .progress-steps-wrapper {
+  position: relative;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.container .progress-steps-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #c7c7c7;
+}
+
+.container .progress-steps-wrapper .circle {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  border: 3px solid #c7c7c7;
+  border-radius: 50%;
+  z-index: 3;
+  -webkit-transition: border-color .3s ease-in;
+  transition: border-color .3s ease-in;
+}
+
+.container .progress-steps-wrapper .circle.active {
+  border: 3px solid #3498db;
+}
+
+.container .progress-steps-wrapper .progress-line {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #3498db;
+  -webkit-transition: width .3s ease-in;
+  transition: width .3s ease-in;
+}
+
+.container .step-controller button {
+  padding: 10px 30px;
+  background: #3498db;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.container .step-controller button:disabled {
+  background: #c7c7c7;
+  color: #808080;
+}
